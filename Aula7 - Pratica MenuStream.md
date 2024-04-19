@@ -110,6 +110,17 @@
 }
 ```
 
+11. **Mystery Burger**
+```json
+{
+    "name": "Mystery Burger",
+    "description": "Dare to try it? Each week, our chef creates a new burger that keeps its ingredients a secret until you bite into it!",
+    "price": 12.99,
+    "category": "Burger",
+    "availability": true
+}
+```
+
 ### Alterando um registro
 
 1. **Classic Burger**
@@ -119,6 +130,19 @@
     "name": "Classic Burger",
     "description": "Burger with beef patty, lettuce, tomato, and our special sauce.",
     "price": 6.99,
+    "category": "Burger",
+    "availability": true
+}
+```
+
+### Remova um registro
+
+11. **Mystery Burger**
+```json
+{
+    "name": "Mystery Burger",
+    "description": "Dare to try it? Each week, our chef creates a new burger that keeps its ingredients a secret until you bite into it!",
+    "price": 12.99,
     "category": "Burger",
     "availability": true
 }
