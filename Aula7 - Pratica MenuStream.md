@@ -110,6 +110,20 @@
 }
 ```
 
+### Alterando um registro
+
+1. **Classic Burger**
+   
+```json
+{
+    "name": "Classic Burger",
+    "description": "Burger with beef patty, lettuce, tomato, and our special sauce.",
+    "price": 6.99,
+    "category": "Burger",
+    "availability": true
+}
+```
+
 ## Customer
 
 1. **Alice Johnson**
