@@ -199,6 +199,41 @@
     "paymentPreferences": "Apple Pay"
 }
 ```
+
+6. **Maxwell Mystery**
+```json
+{
+    "name": "Maxwell Mystery",
+    "email": "max.mystery@example.com",
+    "deliveryAddress": "221B Baker Street, Springfield, IL",
+    "paymentPreferences": "Cryptocurrency"
+}
+```
+
+### Alterando registro
+
+1. **Alice Johnson**
+```json
+{
+    "name": "Alice Johnson",
+    "email": "alice.johnson@example.com",
+    "deliveryAddress": "1234 Maple St, Springfield, IL",
+    "paymentPreferences": "Debit Card"
+}
+```
+
+### Remova um Registro
+
+6. **Maxwell Mystery**
+```json
+{
+    "name": "Maxwell Mystery",
+    "email": "max.mystery@example.com",
+    "deliveryAddress": "221B Baker Street, Springfield, IL",
+    "paymentPreferences": "Cryptocurrency"
+}
+```
+
 ## Order
 
 1. **Order 1**
@@ -303,6 +338,56 @@
     "status": "completed",
     "orderDate": "2024-04-05T20:30:00Z",
     "fulfillmentDate": "2024-04-05T23:00:00Z"
+}
+```
+
+
+6. **Order 6**
+
+```json
+{
+    "customerId": 3,  // Supondo que Carol White esteja organizando a festa
+    "orderDetails": [
+        {
+            "productId": 1,  // Classic Burger
+            "quantity": 50   // Um grande pedido para os convidados do evento
+        },
+        {
+            "productId": 10,  // Craft Beer
+            "quantity": 100  // Bebidas para acompanhar
+        }
+    ],
+    "totalAmount": 1099.50,
+    "status": "completed",
+    "orderDate": "2024-06-15T18:00:00Z",  // Data do evento de lançamento
+    "fulfillmentDate": "2024-06-15T20:00:00Z"
+}
+```
+
+Regra de negócio cada pedido deve ter o valor "totalAmount" calculado com base no valor dos itens * a quantidade + 10% do garçom.
+Modifique o código para que funcione desta maneira.
+
+### Altere o pedido
+
+
+1. **Order 1**
+```json
+{
+    "customerId": 1,
+    "orderDetails": [
+        {
+            "productId": 1,
+            "quantity": 4
+        },
+        {
+            "productId": 3,
+            "quantity": 1
+        }
+    ],
+    "totalAmount": 38.46,
+    "status": "completed",
+    "orderDate": "2024-04-01T12:30:00Z",
+    "fulfillmentDate": "2024-04-01T15:00:00Z"
 }
 ```
 
