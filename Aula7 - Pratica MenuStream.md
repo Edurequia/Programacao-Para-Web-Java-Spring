@@ -346,20 +346,20 @@
 
 ```json
 {
-    "customerId": 3,  // Supondo que Carol White esteja organizando a festa
+    "customerId": 3,  
     "orderDetails": [
         {
-            "productId": 1,  // Classic Burger
-            "quantity": 50   // Um grande pedido para os convidados do evento
+            "productId": 1,  
+            "quantity": 50 
         },
         {
-            "productId": 10,  // Craft Beer
-            "quantity": 100  // Bebidas para acompanhar
+            "productId": 10,  
+            "quantity": 100 
         }
     ],
     "totalAmount": 1099.50,
     "status": "completed",
-    "orderDate": "2024-06-15T18:00:00Z",  // Data do evento de lançamento
+    "orderDate": "2024-06-15T18:00:00Z", 
     "fulfillmentDate": "2024-06-15T20:00:00Z"
 }
 ```
