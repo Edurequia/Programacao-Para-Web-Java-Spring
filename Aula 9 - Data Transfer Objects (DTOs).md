@@ -49,28 +49,55 @@ Tanto DTOs quanto records são utilizados para lidar com dados de maneiras que f
 
 Ambas as abordagens servem para diferentes propósitos em diferentes contextos, mas ambas buscam melhorar a clareza, manutenção e eficiência do código ao lidar com estruturas de dados em uma aplicação.
 
+## Exemplo utilizando ModelMapper
+
+O uso do ModelMapper é uma alternativa para automatizar o processo de transferência de dados entre objetos, o que é muito útil quando você tem muitos campos ou deseja um código mais limpo e fácil de manter. Como sua classe `Customer` já usa a anotação `@Data` do Lombok, ela automaticamente inclui os getters e setters necessários para cada campo, o que facilita a integração com o ModelMapper.
+
+### Passo a Passo para Utilizar o ModelMapper
+
+1. **Adicionar a Dependência do ModelMapper:**
+   Primeiro, você precisa adicionar a dependência do ModelMapper ao seu projeto. Se você está usando Maven, adicione o seguinte ao seu arquivo `pom.xml`:
+
+   ```xml
+   <dependency>
+       <groupId>org.modelmapper</groupId>
+       <artifactId>modelmapper</artifactId>
+       <version>2.4.4</version>
+   </dependency>
+   ```
+
+2. **Usar o ModelMapper para Mapear os Dados:**
+   Agora você pode usar o ModelMapper para mapear dados do `CustomerDTO` para o `Customer`. Você pode fazer isso diretamente no seu método `createCustomer`:
+
+**CustomerController.java**
+   ```java
+   @PostMapping
+   public ResponseEntity<Customer> createCustomer(@RequestBody CustomerDTO customerDTO) {
+       ModelMapper modelMapper = new ModelMapper();
+       Customer customer = modelMapper.map(customerDTO, Customer.class);
+       return ResponseEntity.ok(customerService.saveCustomer(customer));
+   }
+   ```
+
+### Vantagens do ModelMapper
+
+- **Automatização:** Reduz a necessidade de escrever código boilerplate para mapear objetos manualmente.
+- **Flexibilidade:** Facilmente configurável para mapeamentos mais complexos.
+- **Redução de Erros:** Minimiza o risco de erros humanos em mapeamentos manuais.
+
+Usar o ModelMapper pode realmente simplificar seu código quando você tem muitos campos para transferir ou quando as transformações entre os tipos de dados são não-triviais. Ele também ajuda a manter seu código limpo e fácil de entender.
+
 
 **CustomerController.java**
 
 ```java
-import com.example.MenuStream.dto.CustomerDTO;
-import org.modelmapper.ModelMapper;
 
-```
-<dependency>
-			<groupId>org.modelmapper</groupId>
-			<artifactId>modelmapper</artifactId>
-			<version>2.4.4</version>
-</dependency>
-```
-// Métodos existentes adaptados para usar CustomerDTO
-@PostMapping
-public ResponseEntity<CustomerDTO> createCustomer(@RequestBody CustomerDTO customerDTO) {
-    Customer customer = modelMapper.map(customerDTO, Customer.class);
-    Customer savedCustomer = customerService.saveCustomer(customer);
-    CustomerDTO savedCustomerDTO = modelMapper.map(savedCustomer, CustomerDTO.class);
-    return ResponseEntity.ok(savedCustomerDTO);
-}
+    @PostMapping
+    public ResponseEntity<Customer> createCustomer(@RequestBody CustomerDTO customerDTO) {
+        ModelMapper modelMapper = new ModelMapper();
+        Customer customer = modelMapper.map(customerDTO, Customer.class);
+        return ResponseEntity.ok(customerService.saveCustomer(customer));
+    }
 
 // Similar para outros métodos
 ```
@@ -95,17 +122,12 @@ public ResponseEntity<CustomerDTO> createCustomer(@RequestBody CustomerDTO custo
 ### Corpo do Método
 
 ```java
+ModelMapper modelMapper = new ModelMapper();
 Customer customer = modelMapper.map(customerDTO, Customer.class);
-Customer savedCustomer = customerService.saveCustomer(customer);
-CustomerDTO savedDto = modelMapper.map(savedCustomer, CustomerDTO.class);
-return ResponseEntity.ok(savedDto);
+return ResponseEntity.ok(customerService.saveCustomer(customer));
 ```
 
 - **Model Mapping**: A linha `Customer customer = modelMapper.map(customerDTO, Customer.class);` utiliza uma instância de `ModelMapper` para converter o `CustomerDTO` (objeto de transferência de dados) em uma entidade `Customer`. Esta entidade `Customer` é a que será persistida no banco de dados.
-
-- **Salvar o Cliente**: A linha `Customer savedCustomer = customerService.saveCustomer(customer);` chama o método `saveCustomer` do serviço `CustomerService`. Este método é responsável por salvar a entidade `Customer` no repositório (e, portanto, no banco de dados). O objeto retornado, `savedCustomer`, representa a entidade `Customer` depois de ser salva, o que pode incluir adições como um ID gerado automaticamente.
-
-- **Retorno do DTO**: Após salvar o cliente, o `ModelMapper` é usado novamente para converter a entidade `Customer` salva de volta para um DTO em `CustomerDTO savedDto = modelMapper.map(savedCustomer, CustomerDTO.class);`. Isto é útil para garantir que qualquer dado gerado ou modificado durante a operação de salvamento (como um ID de banco de dados) seja incluído no DTO que será retornado ao cliente.
 
 - **Resposta HTTP**: Finalmente, `return ResponseEntity.ok(savedDto);` constrói uma resposta HTTP com o status 200 OK, contendo o `CustomerDTO` que reflete o cliente recém-criado. Este objeto `CustomerDTO` inclui todos os dados relevantes do cliente, incluindo qualquer identificador único atribuído durante o processo de salvamento.
 
