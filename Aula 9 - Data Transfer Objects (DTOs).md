@@ -56,6 +56,13 @@ Ambas as abordagens servem para diferentes propósitos em diferentes contextos, 
 import com.example.MenuStream.dto.CustomerDTO;
 import org.modelmapper.ModelMapper;
 
+```
+<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>2.4.4</version>
+</dependency>
+```
 // Métodos existentes adaptados para usar CustomerDTO
 @PostMapping
 public ResponseEntity<CustomerDTO> createCustomer(@RequestBody CustomerDTO customerDTO) {
