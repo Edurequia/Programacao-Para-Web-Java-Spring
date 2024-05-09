@@ -11,6 +11,8 @@ import com.example.MenuStream.repository.OrderRepository;
 import com.example.MenuStream.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.math.BigDecimal;
 import java.util.List;
 
 @Service
@@ -24,12 +26,12 @@ public class OrderService {
     private ProductRepository productRepository;
 
     public Order saveOrder(OrderDTO orderDTO) {
+        BigDecimal totalAmount = BigDecimal.ZERO;
         Customer customer = customerRepository.findById(orderDTO.getCustomerId())
                 .orElseThrow(() -> new RuntimeException("Customer not found"));
 
         Order order = new Order();
         order.setCustomer(customer);
-        order.setTotalAmount(orderDTO.getTotalAmount());
         order.setStatus(orderDTO.getStatus());
         order.setOrderDate(orderDTO.getOrderDate());
         order.setFulfillmentDate(orderDTO.getFulfillmentDate());
@@ -42,7 +44,14 @@ public class OrderService {
             orderDetail.setProduct(product);
             orderDetail.setQuantity(detail.getQuantity());
             order.addOrderDetail(orderDetail);
+
+            BigDecimal itemTotal = product.getPrice().multiply(BigDecimal.valueOf(detail.getQuantity()));
+            totalAmount = totalAmount.add(itemTotal);
         }
+
+        //Acrescentando aqueles 10%
+        order.setTotalAmount(totalAmount.multiply(BigDecimal.valueOf(1.1)));
+
         return orderRepository.save(order);
     }
 

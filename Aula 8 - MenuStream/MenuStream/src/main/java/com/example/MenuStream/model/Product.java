@@ -27,5 +27,7 @@ public class Product {
     @Column(nullable = false)
     private boolean availability;
 
-    // Constructors, getters and setters
+    @Column
+    private String image;
+
 }

@@ -1,9 +1,13 @@
 package com.example.MenuStream.model;
 
+import com.example.MenuStream.DTO.CustomerDTO;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 @Entity
 @Table(name = "customers")
 public class Customer {
@@ -22,6 +26,12 @@ public class Customer {
 
     @Column(nullable = true)
     private String paymentPreferences;
-
     // Constructors, getters and setters
+
+    public Customer (CustomerDTO data){
+        this.name = data.name();
+        this.email = data.email();
+        this.deliveryAddress = data.deliveryAddress();
+        this.paymentPreferences = data.paymentPreferences();
+    }
 }
