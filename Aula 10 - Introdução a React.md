@@ -57,9 +57,6 @@ npm install @tanstack/react-query
 
 Para incluir a imagem que você enviou no tutorial de configuração do projeto com o Vite, aqui está uma versão atualizada do texto para seu arquivo `.md` no GitHub, com a inclusão do passo a passo usando o terminal (cmd) e a referência à imagem:
 
-```markdown
-# Configuração do Projeto com Vite
-
 ## Criando o Projeto com Vite
 
 Para criar um novo projeto utilizando o Vite, siga os passos abaixo:
