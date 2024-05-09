@@ -52,7 +52,7 @@ npm install @tanstack/react-query
 Axios é uma biblioteca JavaScript usada para fazer requisições HTTP. Para instalar Axios, use o comando:
 
 ```bash
-npm install @tanstack/react-query
+npm install axios
 ```
 
 Para incluir a imagem que você enviou no tutorial de configuração do projeto com o Vite, aqui está uma versão atualizada do texto para seu arquivo `.md` no GitHub, com a inclusão do passo a passo usando o terminal (cmd) e a referência à imagem:
