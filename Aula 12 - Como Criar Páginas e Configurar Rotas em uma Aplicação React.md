@@ -241,7 +241,7 @@ export default AppRoutes;
 
 Atualize o componente `App` para importar e usar o `AppRoutes`:
 
-```jsx
+```tsx
 import { Link } from 'react-router-dom';
 import AppRoutes from './routes';
 
@@ -308,7 +308,3 @@ export default App;
 ## Recursos Adicionais
 - [Documentação do React Router](https://reactrouter.com/)
 - [Documentação do Vite](https://vitejs.dev/)
-
-
-
-Espero que isso ajude na preparação da sua aula! Se precisar de mais alguma coisa, estou à disposição.
