@@ -741,7 +741,8 @@ Utilizando o Spring Boot com JPA, sua tarefa é projetar e implementar um sistem
 
 <div align="center">
     
-![image](https://github.com/Herysson/Spring-JPA/assets/7634437/4915e91c-e764-4167-9604-a00c96050db6)
+![image](https://github.com/user-attachments/assets/1c46672e-48d8-406e-a432-1aa1162c2619)
+
 
 </div>
 
