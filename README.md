@@ -1,105 +1,100 @@
 
 ![Programação para Web - Java Spring](https://github.com/user-attachments/assets/f7b7e455-f85b-4909-b5fb-22bb7b2abf23)
 
-# Programação para Web com Java e Spring
+# Programacao para Web - Java e Spring
 
-Este repositório contém materiais e exemplos desenvolvidos para o curso de **Programação para Web**, utilizando **Java** e o framework **Spring**. O objetivo é fornecer recursos didáticos que auxiliem no aprendizado e na prática de desenvolvimento de aplicações web com essas tecnologias.
+Este repositório contém materiais e exemplos desenvolvidos para a disciplina **Programação para Web**, utilizando **Java** e o framework **Spring**. O objetivo é fornecer recursos didáticos que auxiliem no aprendizado e na prática de desenvolvimento de aplicações web.
 
-## Unidades do Curso
+## Estrutura do Conteúdo
+A disciplina está dividida em unidades e subunidades conforme o planejamento didático.
 
-### Unidade 1 - Aspectos Tecnológicos
-
+### **Unidade 1 - Aspectos Tecnológicos**
 Compreender os principais aspectos tecnológicos relacionados ao desenvolvimento para web de maneira generalizada.
 
-**Conteúdo:**
-- **Aula 02 - Introdução ao Spring Boot**
-  - `Aula 02 - Spring Boot.pdf`: Material introdutório sobre o Spring Boot, abordando conceitos básicos e configuração inicial.
+#### **Subunidades:**
+- 1.1 - Servidores Web  
+- 1.2 - Linguagens de script para web  
+- 1.3 - Banco de dados relacionais  
 
-### Unidade 2 - Linguagens de Script
+**Objetivos de Aprendizagem:**
+- Descrever os conceitos, características e funcionalidades dos servidores web.
+- Diferenciar as principais linguagens de script utilizadas no desenvolvimento web.
+- Explicar a interação entre sistemas web e bancos de dados relacionais.
 
+### **Unidade 2 - Linguagens de Script**
 Criar scripts orientados a objetos responsáveis pelo gerenciamento de dados de formulário web de maneira efetiva.
 
-**Conteúdo:**
-- **Aula 08 - Prática com MenuStream**
-  - `Aula 08 - Pratica MenuStream.md`: Exercício prático utilizando Streams em Java.
-  - Pasta `Aula 08 - MenuStream/`: Contém o código-fonte relacionado à prática.
+#### **Subunidades:**
+- 2.1 - Sintaxe de linguagens de script  
+- 2.2 - Formulários e manipulação de dados  
+- 2.3 - Processamento de requisições e respostas HTTP  
 
-- **Aula 10 - Frontend com MenuStream**
-  - Pasta `Aula 10 - MenuStream Front End/`: Contém o código-fonte do frontend relacionado ao projeto MenuStream.
+**Objetivos de Aprendizagem:**
+- Desenvolver aplicações web utilizando linguagens de script.
+- Implementar manipulação de formulários e processamento de dados.
+- Gerenciar requisições e respostas HTTP de forma estruturada.
 
-- **Aula 12 - React: Criação de Páginas e Configuração de Rotas**
-  - Pasta `Aula 12 - Como Criar Páginas e Configurar Rotas em uma Aplicação React/`: Exemplos de criação de páginas e configuração de rotas em uma aplicação React.
+### **Unidade 3 - Manipulação de Bancos de Dados Relacionais**
+Manipular bancos de dados relacionais por meio de uma linguagem de script para construção de aplicações web que necessitem de gerenciamento de dados.
 
-### Unidade 3 - Manipulação de Bancos de Dados Relacionais
+#### **Subunidades:**
+- 3.1 - Conexão entre linguagem de script e banco de dados  
+- 3.2 - Consultas SQL para aplicações web  
+- 3.3 - Transações e segurança de dados  
 
-Manipular bancos de dados relacionais por meio de uma linguagem de script para construção de aplicações web que necessitem de gerenciamento de dados de maneira adequada.
+**Objetivos de Aprendizagem:**
+- Construir scripts capazes de conectar e manipular bancos de dados relacionais.
+- Escrever e otimizar consultas SQL.
+- Aplicar conceitos de transações e segurança no armazenamento de dados.
 
-**Conteúdo:**
-- **Aula 03 - Anotações do Spring JPA**
-  - `Aula 03 - Spring JPA Annotations.md`: Explicação sobre as principais anotações utilizadas no Spring JPA para mapeamento objeto-relacional.
-
-- **Aulas 04 a 07 - Desenvolvimento de um CRUD com Spring Backend**
-  - `Aula 04 - Lombok.md`: Introdução ao uso do Lombok para simplificar o código Java.
-  - `Aula 05 - Controller, Service e Repository.md`: Estruturação de uma aplicação Spring com os padrões Controller, Service e Repository.
-  - `Aula 06 - JSON e Teste de API - Postman.md`: Manipulação de JSON e testes de API utilizando o Postman.
-  - `Aula 07 - JPA Query Methods.md`: Utilização de métodos de consulta no JPA.
-
-- **Aula 09 - Data Transfer Objects (DTOs)**
-  - `Aula 09 - Data Transfer Objects (DTOs).md`: Discussão sobre o padrão DTO e sua implementação no Spring.
-
-### Unidade 4 - Frameworks Backend
-
+### **Unidade 4 - Frameworks Backend**
 Aplicar frameworks backend no projeto de aplicações web de maneira adequada.
 
-**Conteúdo:**
-- **Aula 13 - Autenticação com Spring Security e JWT**
-  - Pasta `Aula 13 - Spring Security + JWT - Backend/`: Implementação de autenticação utilizando Spring Security e JWT.
+#### **Subunidades:**
+- 4.1 - Tipos de frameworks backend  
+- 4.2 - Instalação e configuração de frameworks  
+- 4.3 - Desenvolvimento de aplicações com frameworks  
+
+**Objetivos de Aprendizagem:**
+- Explicar frameworks backend voltados ao desenvolvimento web.
+- Configurar e utilizar um framework backend para desenvolvimento de aplicações.
+- Desenvolver uma aplicação web funcional utilizando frameworks backend.
 
 ## Tecnologias Utilizadas
-
-- **Java**: Linguagem de programação principal utilizada.
-- **Spring Framework**: Framework para desenvolvimento de aplicações Java.
-  - **Spring Boot**: Facilita a configuração e a execução de aplicações Spring.
-  - **Spring JPA**: Abstração para acesso a dados com JPA.
-  - **Spring Security**: Framework de segurança para aplicações Spring.
-- **Lombok**: Biblioteca para redução de código boilerplate no Java.
-- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
-- **Postman**: Ferramenta para teste de APIs.
+- **Java**: Linguagem principal do backend.
+- **Spring Boot**: Framework para criação de aplicações web em Java.
+- **Spring JPA**: Integração com bancos de dados relacionais.
+- **Spring Security**: Implementação de autenticação e segurança.
+- **React**: Biblioteca JavaScript para desenvolvimento do frontend.
+- **Postman**: Ferramenta para testes de API REST.
 
 ## Como Executar
 
-Para executar os exemplos deste repositório, siga as instruções abaixo:
+### **Pré-requisitos**
+- Java JDK 11 ou superior
+- Maven instalado
+- Node.js e npm instalados (para projetos React)
 
-1. **Pré-requisitos**:
-   - **Java JDK 11** ou superior instalado.
-   - **Maven** instalado para gerenciamento de dependências.
-   - **Node.js** e **npm** instalados para projetos que envolvem React.
-
-2. **Clonar o repositório**:
+### **Passos para execução**
+1. Clone o repositório:
    ```bash
    git clone https://github.com/Herysson/Programacao-Para-Web-Java-Spring.git
    cd Programacao-Para-Web-Java-Spring
    ```
-
-3. **Executar aplicações Spring Boot**:
-   - Navegue até a pasta correspondente ao projeto desejado.
-   - Utilize o Maven para construir e executar a aplicação:
-     ```bash
-     mvn spring-boot:run
-     ```
-
-4. **Executar aplicações React**:
-   - Navegue até a pasta do projeto React.
-   - Instale as dependências:
-     ```bash
-     npm install
-     ```
-   - Inicie a aplicação:
-     ```bash
-     npm start
-     ```
+2. Para rodar aplicações Spring Boot:
+   ```bash
+   mvn spring-boot:run
+   ```
+3. Para rodar aplicações React:
+   ```bash
+   cd frontend
+   npm install
+   npm start
+   ```
 
 ## Contribuições
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests com melhorias, correções ou novos exemplos.
+Sinta-se à vontade para contribuir abrindo **issues** ou enviando **pull requests**.
+
+
 
