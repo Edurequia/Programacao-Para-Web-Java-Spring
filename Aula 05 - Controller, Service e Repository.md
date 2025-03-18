@@ -171,7 +171,7 @@ public class UserController {
 Essa estrutura de controller oferece um ponto de partida sólido para criar uma API RESTful para a entidade `User`, seguindo boas práticas e padrões de design.
 
 
-##Service
+## Service
 
 Uma camada de serviço em uma aplicação, especialmente em arquiteturas de software como a Modelo-Visão-Controlador (MVC) ou em aplicações baseadas em microserviços, é uma abstração de código designada principalmente para conter a lógica de negócios da aplicação. Esta camada age como um mediador entre a interface do usuário (por exemplo, um controlador web em uma aplicação MVC) e a camada de acesso a dados (onde os dados são armazenados e recuperados).
 
