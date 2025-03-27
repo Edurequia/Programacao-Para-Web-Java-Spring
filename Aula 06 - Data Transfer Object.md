@@ -112,7 +112,96 @@ public UserDTO createUser(@RequestBody CreateUserDTO dto) {
 
 ---
 
-Perfeito, Professor Herysson! Aqui está a **atividade didática** com foco em **DTOs (Data Transfer Objects)** utilizando o repositório [UserPhoneAPI](https://github.com/Herysson/UserPhoneAPI).
+### Exemplo de utilização de .stream(), .map(), .toList
+
+```java
+List<Phone> phones = dto.phones().stream()
+                .map(phoneDTO -> new Phone(phoneDTO.ddd(), phoneDTO.number(), user))
+                .toList();
+```
+
+Essa linha está convertendo uma **lista de DTOs de entrada (`PhoneRequestDTO`)** em uma **lista de entidades (`Phone`)**, para que elas possam ser persistidas no banco de dados.
+
+---
+
+### 🔍 Parte a Parte
+
+#### 1. `dto.phones()`
+
+Esse método chama o campo da classe `UserRequestDTO`, que contém uma lista de telefones enviados na requisição.
+
+```java
+public record UserRequestDTO(String name, String email, List<PhoneRequestDTO> phones) {}
+```
+
+Ou seja, aqui estamos acessando uma **lista de `PhoneRequestDTO`**, algo assim:
+
+```json
+"phones": [
+  { "ddd": "51", "number": "999999999" },
+  { "ddd": "11", "number": "988888888" }
+]
+```
+
+---
+
+#### 2. `.stream()`
+
+Converte essa lista de `PhoneRequestDTO` em um **Stream**, permitindo usar a API funcional do Java para transformar os elementos.
+
+---
+
+#### 3. `.map(phoneDTO -> new Phone(phoneDTO.ddd(), phoneDTO.number(), user))`
+
+Para cada `phoneDTO` da lista, cria uma nova **instância da entidade `Phone`**, passando:
+
+- `phoneDTO.ddd()` → o DDD do telefone
+- `phoneDTO.number()` → o número do telefone
+- `user` → o objeto `User` que está sendo criado
+
+Ou seja, estamos fazendo o **mapeamento de DTO → Entidade**.
+
+---
+
+#### 4. `.toList()`
+
+Coleta todos os objetos `Phone` gerados pelo `.map()` e retorna como uma **nova lista do tipo `List<Phone>`**.
+
+---
+
+### 💡 Em resumo:
+
+> Essa linha pega os telefones enviados na requisição como `PhoneRequestDTO`, transforma cada um deles em uma entidade `Phone`, e os associa ao usuário (`user`) que está sendo criado, resultando em uma lista pronta para salvar no banco.
+
+---
+
+### 📌 Exemplo prático:
+
+Suponha que `dto.phones()` contenha:
+
+```java
+[
+    new PhoneRequestDTO("51", "999999999"),
+    new PhoneRequestDTO("11", "988888888")
+]
+```
+
+E que `user` seja:
+
+```java
+new User("Maria", "maria@email.com")
+```
+
+A linha vai gerar:
+
+```java
+List<Phone> phones = [
+    new Phone("51", "999999999", user),
+    new Phone("11", "988888888", user)
+];
+```
+
+Esses objetos então serão **associados ao usuário Maria** e persistidos junto com ela.
 
 ---
 
