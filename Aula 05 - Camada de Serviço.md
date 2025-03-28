@@ -150,8 +150,6 @@ Implemente **as seguintes regras de negócio** na camada de serviço:
 ### ✅ 2. Validar o **DDD** do telefone
 - **O que fazer:** O DDD deve estar entre 11 e 99. Verifique antes de salvar o telefone.
 
----
-
 ### ✅ 3. Não permitir **e-mails repetidos** para usuários
 - **O que fazer:** Antes de salvar um novo usuário, verificar se o e-mail já existe.
 
