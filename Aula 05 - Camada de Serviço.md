@@ -145,20 +145,14 @@ Implemente **as seguintes regras de negócio** na camada de serviço:
 ---
 
 ### ✅ 1. Um usuário pode ter no máximo **3 telefones** cadastrados
-
-- **Onde aplicar:** `PhoneService.java`
 - **O que fazer:** Antes de salvar um novo telefone, verifique quantos telefones o usuário já tem.
 
 ### ✅ 2. Validar o **DDD** do telefone
-
-- **Onde aplicar:** `PhoneService.java`
 - **O que fazer:** O DDD deve estar entre 11 e 99. Verifique antes de salvar o telefone.
 
 ---
 
 ### ✅ 3. Não permitir **e-mails repetidos** para usuários
-
-- **Onde aplicar:** `UserService.java`
 - **O que fazer:** Antes de salvar um novo usuário, verificar se o e-mail já existe.
 
 ---
