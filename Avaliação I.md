@@ -85,13 +85,11 @@ Use os exemplos abaixo para testar a API com ferramentas como **Postman** ou **I
   "items": [
     {
       "productId": 1,
-      "quantity": 2,
-      "unitPrice": 3500.00
+      "quantity": 2
     },
     {
       "productId": 2,
-      "quantity": 1,
-      "unitPrice": 1200.00
+      "quantity": 1
     }
   ]
 }
