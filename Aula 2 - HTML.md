@@ -1,47 +1,96 @@
-### Headings (Títulos)
-Os títulos em HTML são definidos com as tags `<h1>` a `<h6>`, onde `<h1>` representa o título de maior importância e `<h6>` o de menor importância.
+# **HTML**  
 
-Exemplo:
+
+## **Introdução ao HTML**  
+
+### **O que é HTML?**  
+HTML (*HyperText Markup Language*) é a linguagem padrão para criar páginas da web. Ele define a estrutura e o conteúdo de uma página usando **elementos** (tags) que informam ao navegador como exibir textos, imagens, links e outros componentes.  
+
+### **Como o HTML Funciona?**  
+- O HTML consiste em uma série de **tags** (etiquetas) que envolvem o conteúdo.  
+- O navegador lê o HTML e renderiza a página conforme as instruções das tags.  
+- Páginas HTML são salvas com a extensão **.html**.  
+
+Exemplo básico:  
 ```html
-<h1>Este é um título principal</h1>
-<h2>Este é um subtítulo</h2>
-<h3>Este é um título menor</h3>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Título da Página</title>
+</head>
+<body>
+    <h1>Meu Primeiro Cabeçalho</h1>
+    <p>Meu primeiro parágrafo.</p>
+</body>
+</html>
 ```
 
-### Paragraphs (Parágrafos)
-Os parágrafos são definidos com a tag `<p>`, que agrupa blocos de texto.
+---
 
-Exemplo:
+### **Estrutura Básica de um Documento HTML**  
+Todo documento HTML possui uma estrutura fundamental:  
+
+1. **`<!DOCTYPE html>`**  
+   - Declara o tipo de documento (HTML5).  
+
+2. **`<html>`**  
+   - Elemento raiz que engloba todo o conteúdo da página.  
+
+3. **`<head>`**  
+   - Contém metadados, como título da página (`<title>`), links para CSS e scripts.  
+
+4. **`<body>`**  
+   - Contém o conteúdo visível da página (textos, imagens, links, etc.).  
+
+---
+
+### **Tags HTML Básicas**  
+Algumas das principais tags incluem:  
+
+| Tag         | Descrição                          | Exemplo                     |
+|-------------|------------------------------------|-----------------------------|
+| `<h1> - <h6>` | Cabeçalhos (títulos)               | `<h1>Título Principal</h1>` |
+| `<p>`       | Parágrafo                          | `<p>Texto aqui.</p>`        |
+| `<a>`       | Link                               | `<a href="url">Link</a>`    |
+| `<img>`     | Imagem                             | `<img src="imagem.jpg">`    |
+| `<ul>`, `<ol>`, `<li>` | Listas (não ordenadas/ordenadas) | `<ul><li>Item 1</li></ul>`  |
+| `<div>`     | Divisão/container genérico         | `<div>Conteúdo</div>`       |
+
+---
+
+### **Atributos HTML**  
+Atributos fornecem informações adicionais sobre elementos. Exemplos comuns:  
+
+- **`href`** (em `<a>`) – Define o destino de um link.  
+  ```html
+  <a href="https://www.google.com">Visite o Google</a>
+  ```
+- **`src`** (em `<img>`) – Especifica o caminho da imagem.  
+  ```html
+  <img src="foto.jpg" alt="Descrição da imagem">
+  ```
+- **`alt`** – Texto alternativo para acessibilidade.  
+
+---
+
+### **Estrutura Básica de um Documento HTML**  
+Todo arquivo HTML deve seguir este esqueleto:  
 ```html
-<p>Este é um parágrafo de texto em HTML.</p>
-<p>Outro parágrafo com informações adicionais.</p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+</head>
+<body>
+    <!-- Conteúdo aqui -->
+</body>
+</html>
 ```
+- `lang="pt-BR"`: Define o idioma.  
+- `meta charset="UTF-8"`: Permite acentos e caracteres especiais.  
+- `viewport`: Adapta a página para dispositivos móveis.  
 
-### Links
-Os links são criados com a tag `<a>`, que permite referenciar outras páginas ou recursos.
-
-Exemplo:
-```html
-<a href="https://www.exemplo.com">Clique aqui para acessar o site</a>
-```
-
-### Images (Imagens)
-As imagens são adicionadas usando a tag `<img>`, que requer um atributo `src` para definir a origem da imagem.
-
-Exemplo:
-```html
-<img src="imagem.jpg" alt="Descrição da imagem">
-```
-
-### Visualizando o Código-Fonte HTML
-Para visualizar o código-fonte HTML de uma página:
-1. Clique com o botão direito do mouse na página.
-2. Selecione a opção **Exibir código-fonte** (View Page Source).
-3. O navegador abrirá o código-fonte da página.
-
-### Visualizando Elementos HTML
-Para inspecionar elementos HTML:
-1. Clique com o botão direito na página e selecione **Inspecionar** (Inspect).
-2. O navegador abrirá o DevTools mostrando os elementos HTML.
-3. Você pode navegar pela estrutura do HTML e visualizar suas propriedades.
+---
 
