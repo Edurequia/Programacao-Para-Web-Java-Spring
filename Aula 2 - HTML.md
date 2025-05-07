@@ -76,11 +76,6 @@ Atributos fornecem informações adicionais sobre elementos. Exemplos comuns:
 
 ---
 
-## **Material Didático Completo sobre HTML**  
-*(Estrutura expandida com exemplos práticos)*  
-
----
-
 ### **Estrutura Básica de um Documento HTML**  
 Todo arquivo HTML válido deve seguir este esqueleto:  
 ```html
@@ -109,24 +104,9 @@ Todo arquivo HTML válido deve seguir este esqueleto:
 ---
 
 ### **Como os Navegadores Funcionam?**  
-Os navegadores (*browsers* como Chrome, Firefox, Edge) **não exibem as tags HTML**, mas as usam para renderizar o conteúdo corretamente.  
+Os navegadores (*browsers* como Chrome, Firefox, Edge) **não exibem as tags HTML**, mas as usam para renderizar o conteúdo corretamente.  >
 
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Título da Página</title>
-</head>
-<body>
-    <h1>Isto é um Cabeçalhos</h1>
-    <p>Isto é um paragrafo.</p>
-    <p>Isto é outro paragrafo.</p>
-</body>
-</html>
-```
-
-![image](https://github.com/user-attachments/assets/304cf207-d10a-4efb-a4b2-f4121afa5fde)
+![image](https://github.com/user-attachments/assets/fdd5fe09-61e0-4318-956d-3af37771825a)
 
 ---
 
