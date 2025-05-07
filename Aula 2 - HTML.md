@@ -271,6 +271,5 @@ Mostra uma **dica flutuante** (tooltip) quando o mouse passa sobre o elemento.
 
 ---
 
-Deseja que eu crie exercícios com correção automática ou um pequeno quiz com base nesta seção para reforçar o aprendizado dos alunos?
 
 
