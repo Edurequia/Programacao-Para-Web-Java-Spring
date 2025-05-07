@@ -51,6 +51,7 @@ Algumas das principais tags incluem:
 |-------------|------------------------------------|-----------------------------|
 | `<h1> - <h6>` | Cabeçalhos (títulos)               | `<h1>Título Principal</h1>` |
 | `<p>`       | Parágrafo                          | `<p>Texto aqui.</p>`        |
+| `<br>`       | Qubra de linha                         | `<p>Bairro Jardim<br> São Paulo/SP</p>`        |
 | `<a>`       | Link                               | `<a href="url">Link</a>`    |
 | `<img>`     | Imagem                             | `<img src="imagem.jpg">`    |
 | `<ul>`, `<ol>`, `<li>` | Listas (não ordenadas/ordenadas) | `<ul><li>Item 1</li></ul>`  |
@@ -134,4 +135,15 @@ Os navegadores (*browsers* como Chrome, Firefox, Edge) **não exibem as tags HTM
 Abaixo uma visualização da estrutura de uma pagina HTML.
 
 ![image](https://github.com/user-attachments/assets/ecc8f0b3-ca65-4a52-9459-6ad1162622b1)
+
+--- 
+
+### Atividade: 
+
+Criar um mini currículo pessoal em HTML contendo:
+- Foto
+- Nome, profissão
+- Pequena bio
+- Lista de habilidades
+- Link para redes sociais
 
