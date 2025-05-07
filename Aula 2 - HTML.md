@@ -184,11 +184,55 @@ Especifica o destino de um link.
 
 #### `src` (em `<img>`)
 
-Indica o caminho da imagem a ser exibida.
+O atributo `src` especifica o **caminho para o arquivo de imagem** que será exibido na página.
 
 ```html
-<img src="perfil.jpg" alt="Foto de perfil">
+<img src="foto.jpg" alt="Foto de perfil">
 ```
+
+##### **Formas de especificar o valor de `src`:**
+
+Existem duas formas principais de informar o caminho da imagem:
+
+---
+
+**1. URL Absoluta**
+
+* Aponta para uma **imagem externa**, hospedada em outro site.
+* Inclui o protocolo (https) e o nome do domínio.
+
+```html
+<img src="https://www.w3schools.com/images/img_girl.jpg" alt="Imagem externa">
+```
+
+> ⚠️ **Atenção:**
+>
+> * Imagens externas podem estar protegidas por direitos autorais. Usá-las sem permissão pode violar leis de copyright.
+> * Você **não tem controle** sobre imagens externas – elas podem ser removidas ou alteradas a qualquer momento, quebrando sua página.
+
+---
+
+**2. URL Relativa**
+
+* Aponta para uma **imagem armazenada no próprio site** (no seu servidor).
+* É o método mais recomendado.
+
+**Exemplo 1: Caminho relativo ao arquivo atual (sem barra inicial)**
+
+```html
+<img src="img/foto.jpg" alt="Foto local">
+```
+
+**Exemplo 2: Caminho relativo à raiz do domínio (com barra inicial)**
+
+```html
+<img src="/imagens/foto.jpg" alt="Foto da pasta imagens">
+```
+
+> 💡 **Dica:**
+> Prefira **URLs relativas**. Elas são mais seguras e **não quebram** caso o domínio do site seja alterado ou movido para outro servidor.
+
+---
 
 #### `width` e `height` (em `<img>`)
 
@@ -259,7 +303,7 @@ Mostra uma **dica flutuante** (tooltip) quando o mouse passa sobre o elemento.
 
   <h1 title="Título Principal">Bem-vindo!</h1>
   
-  <p style="color:green;" title="Texto de introdução">Este parágrafo está em verde.</p>
+  <p style="color:orange;" title="Texto de introdução">Este parágrafo está em verde.</p>
 
   <img src="logo.png" alt="Logotipo da empresa" width="150" height="150">
 
@@ -269,7 +313,37 @@ Mostra uma **dica flutuante** (tooltip) quando o mouse passa sobre o elemento.
 </html>
 ```
 
+![image](https://github.com/user-attachments/assets/3e69415f-3f91-4c5e-bd69-e8e7c5473a0c)
+
+
+---
+Claro! Aqui está a versão **simplificada da atividade do mini currículo**, **sem ícones** e com foco apenas no uso correto do HTML e dos atributos aprendidos:
+
 ---
 
+### **Atividade Prática – Mini Currículo com Atributos**
+
+Agora que você aprendeu sobre **elementos HTML** e seus **atributos mais comuns**, **refaça a atividade** criando uma página HTML com as seguintes informações:
+
+#### **Requisitos do mini currículo:**
+
+* Uma **foto pessoal ou ilustrativa** usando `<img>` com os atributos:
+
+  * `src` (caminho da imagem),
+  * `alt` (texto alternativo),
+  * `width` (largura),
+  * `title` (dica ao passar o mouse).
+* **Nome completo** e **profissão** com uso de títulos (`<h1>`, `<h2>`).
+* Uma **breve biografia** utilizando parágrafo (`<p>`), com atributo `title`.
+* Uma **lista de habilidades** utilizando `<ul>` e `<li>`.
+* Um ou mais **links para suas redes sociais** com `<a>` contendo `href` e `title`.
+
+###  **Dicas Técnicas:**
+
+* Utilize **URL relativa** para a imagem (por exemplo: `src="minhafoto.jpg"`).
+* Adicione `lang="pt-BR"` no elemento `<html>` e `meta charset="UTF-8"` no `<head>`.
+* O uso de `style` inline é opcional, mas pode ser usado para personalização simples.
+
+---
 
 
