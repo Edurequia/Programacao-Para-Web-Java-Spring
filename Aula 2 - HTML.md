@@ -346,4 +346,98 @@ Agora que você aprendeu sobre **elementos HTML** e seus **atributos mais comuns
 
 ---
 
+Perfeito! Abaixo está a **Seção 3: Estilos (Styles) e Formatação (Formatting)** completamente reestruturada, **sem o uso de ícones** e incorporando a explicação detalhada do atributo `style`, conforme solicitado:
+
+---
+
+## **Seção 3: Estilos (Styles) e Formatação (Formatting)**
+
+### Estilos com HTML
+
+O HTML permite modificar a aparência dos elementos usando o **atributo `style`**. Esse atributo aplica estilos diretamente a um elemento HTML utilizando propriedades da linguagem CSS.
+
+#### Sintaxe do atributo `style`
+
+```html
+<tagname style="propriedade:valor;">
+```
+
+* A **propriedade** é uma propriedade do CSS (ex: `color`, `font-size`, `background-color`).
+* O **valor** é o valor desejado para essa propriedade (ex: `blue`, `16px`, `center`).
+
+Você aprenderá mais sobre CSS em seções futuras deste curso.
+
+#### Exemplo: alterando a cor de fundo da página
+
+```html
+<body style="background-color:powderblue;">
+
+  <h1>Este é um título</h1>
+  <p>Este é um parágrafo.</p>
+
+</body>
+```
+
+#### Exemplo: aplicando diferentes cores de fundo a elementos
+
+```html
+<body>
+
+  <h1 style="background-color:powderblue;">Este é um título</h1>
+  <p style="background-color:tomato;">Este é um parágrafo.</p>
+
+</body>
+```
+
+### Principais propriedades de estilo
+
+| Propriedade        | Efeito sobre o elemento                    | Exemplo de uso                     |
+| ------------------ | ------------------------------------------ | ---------------------------------- |
+| `color`            | Define a cor do texto                      | `style="color:red;"`               |
+| `background-color` | Define a cor de fundo                      | `style="background-color:yellow;"` |
+| `font-size`        | Define o tamanho da fonte                  | `style="font-size:20px;"`          |
+| `font-family`      | Define o tipo de fonte                     | `style="font-family:Arial;"`       |
+| `text-align`       | Alinha o texto (esquerda, centro, direita) | `style="text-align:center;"`       |
+
+### Formatação de Texto no HTML
+
+Além de aplicar estilos com o atributo `style`, o HTML possui **tags específicas para formatação de texto**, que alteram sua aparência ou enfatizam partes importantes do conteúdo.
+
+#### Tags de formatação mais utilizadas
+
+| Tag        | Descrição                                   | Exemplo                             |
+| ---------- | ------------------------------------------- | ----------------------------------- |
+| `<b>`      | Exibe o texto em **negrito**                | `<b>Texto em negrito</b>`           |
+| `<strong>` | Aplica negrito com ênfase semântica         | `<strong>Texto importante</strong>` |
+| `<i>`      | Exibe o texto em *itálico*                  | `<i>Texto em itálico</i>`           |
+| `<em>`     | Aplica ênfase semântica com itálico         | `<em>Com ênfase</em>`               |
+| `<mark>`   | Destaca o texto com um fundo amarelo padrão | `<mark>Texto destacado</mark>`      |
+| `<small>`  | Reduz o tamanho da fonte                    | `<small>Texto pequeno</small>`      |
+| `<del>`    | Riscado, indica remoção                     | `<del>Texto removido</del>`         |
+| `<ins>`    | Sublinhado, indica inserção                 | `<ins>Texto inserido</ins>`         |
+| `<sub>`    | Subscrito (abaixo da linha)                 | `H<sub>2</sub>O`                    |
+| `<sup>`    | Sobrescrito (acima da linha)                | `2<sup>3</sup>`                     |
+
+### Exemplo Integrado de Estilo e Formatação
+
+```html
+<p style="color:darkgreen; font-size:18px;">
+  <strong>Bem-vindo</strong> ao <em>nosso site</em>. Este texto está <mark>formatado</mark> e com estilo aplicado.
+</p>
+
+<p>
+  Fórmula da água: H<sub>2</sub>O<br>
+  Potência de dois: 2<sup>3</sup> = 8
+</p>
+```
+
+### Atividade
+
+Reabra o exercício do mini currículo e:
+
+1. Aplique pelo menos **três estilos diferentes** utilizando o atributo `style` (ex: cor, tamanho, alinhamento).
+2. Utilize **três ou mais tags de formatação** de texto, como `<strong>`, `<em>`, `<mark>`, `<sub>` ou `<sup>`.
+3. Mantenha a estrutura HTML válida e organizada.
+
+Se desejar, posso estruturar uma próxima seção focando em **estilos internos (`<style>`) ou folhas de estilo externas (`.css`)**. Deseja seguir por esse caminho?
 
