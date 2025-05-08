@@ -317,9 +317,6 @@ Mostra uma **dica flutuante** (tooltip) quando o mouse passa sobre o elemento.
 
 
 ---
-Claro! Aqui está a versão **simplificada da atividade do mini currículo**, **sem ícones** e com foco apenas no uso correto do HTML e dos atributos aprendidos:
-
----
 
 ### **Atividade Prática – Mini Currículo com Atributos**
 
@@ -343,10 +340,6 @@ Agora que você aprendeu sobre **elementos HTML** e seus **atributos mais comuns
 * Utilize **URL relativa** para a imagem (por exemplo: `src="minhafoto.jpg"`).
 * Adicione `lang="pt-BR"` no elemento `<html>` e `meta charset="UTF-8"` no `<head>`.
 * O uso de `style` inline é opcional, mas pode ser usado para personalização simples.
-
----
-
-Perfeito! Abaixo está a **Seção 3: Estilos (Styles) e Formatação (Formatting)** completamente reestruturada, **sem o uso de ícones** e incorporando a explicação detalhada do atributo `style`, conforme solicitado:
 
 ---
 
@@ -439,5 +432,134 @@ Reabra o exercício do mini currículo e:
 2. Utilize **três ou mais tags de formatação** de texto, como `<strong>`, `<em>`, `<mark>`, `<sub>` ou `<sup>`.
 3. Mantenha a estrutura HTML válida e organizada.
 
-Se desejar, posso estruturar uma próxima seção focando em **estilos internos (`<style>`) ou folhas de estilo externas (`.css`)**. Deseja seguir por esse caminho?
+---
+
+## **Seção 4: Cores em HTML**
+
+### Introdução
+
+No HTML, cores podem ser aplicadas a qualquer elemento utilizando o atributo `style` com propriedades CSS como `color` (para texto) e `background-color` (para fundo).
+
+### Formas de Definir Cores
+
+Existem **quatro principais formas** de definir cores no HTML (via CSS):
+
+1. **Nomes de cores (color names)**
+2. **Códigos Hexadecimais (Hex)**
+3. **Modelo RGB (Red, Green, Blue)**
+4. **Modelo HSL (Hue, Saturation, Lightness)**
+
+---
+
+### 1. Usando Nomes de Cores
+
+Você pode usar **nomes de cores pré-definidos**, como `red`, `blue`, `green`, `black`, `gray`, etc.
+
+```html
+<p style="color:blue;">Texto azul com nome de cor</p>
+```
+
+> Existem mais de 140 nomes de cores definidos oficialmente.
+
+---
+
+### 2. Usando Códigos Hexadecimais
+
+Códigos hexadecimais começam com `#` seguido de seis caracteres.
+Exemplo: `#RRGGBB`, onde:
+
+* `RR` = quantidade de vermelho
+* `GG` = quantidade de verde
+* `BB` = quantidade de azul
+
+```html
+<p style="color:#ff0000;">Texto em vermelho (hexadecimal)</p>
+```
+
+* `#000000` → preto
+* `#ffffff` → branco
+* `#00ff00` → verde
+* `#0000ff` → azul
+
+---
+
+### 3. Usando o Modelo RGB
+
+O RGB define a cor com três valores numéricos de 0 a 255.
+
+```html
+<p style="color:rgb(255, 165, 0);">Texto laranja (RGB)</p>
+```
+
+* `rgb(255, 0, 0)` → vermelho
+* `rgb(0, 255, 0)` → verde
+* `rgb(0, 0, 255)` → azul
+
+---
+
+### 4. Usando o Modelo HSL
+
+HSL significa Hue (matiz), Saturation (saturação) e Lightness (luminosidade).
+
+```html
+<p style="color:hsl(120, 100%, 25%);">Texto verde escuro (HSL)</p>
+```
+
+* Matiz (Hue): cor básica em graus (0°=vermelho, 120°=verde, 240°=azul)
+* Saturação: intensidade da cor (0% a 100%)
+* Luminosidade: brilho da cor (0% escuro, 100% claro)
+
+---
+
+### Comparando os Formatos
+
+| Formato | Exemplo                    | Observações                            |
+| ------- | -------------------------- | -------------------------------------- |
+| Nome    | `color: red`               | Fácil de lembrar, limitado a 140 cores |
+| Hex     | `color: #ff0000`           | Muito usado em design gráfico          |
+| RGB     | `color: rgb(255, 0, 0)`    | Boa legibilidade para ajustes finos    |
+| HSL     | `color: hsl(0, 100%, 50%)` | Ideal para manipulação de paletas      |
+
+---
+
+### Tabela Visual de Cores
+
+| Cor                                                                         | Nome        | Hexadecimal | RGB                | HSL                   |
+| --------------------------------------------------------------------------- | ----------- | ----------- | ------------------ | --------------------- |
+| Vermelho    | `red`       | `#ff0000`   | `rgb(255,0,0)`     | `hsl(0, 100%, 50%)`   |
+| Verde       | `green`     | `#008000`   | `rgb(0,128,0)`     | `hsl(120, 100%, 25%)` |
+| Azul        | `blue`      | `#0000ff`   | `rgb(0,0,255)`     | `hsl(240, 100%, 50%)` |
+| Dourado     | `gold`      | `#ffd700`   | `rgb(255,215,0)`   | `hsl(51, 100%, 50%)`  |
+| Cinza Claro | `lightgray` | `#d3d3d3`   | `rgb(211,211,211)` | `hsl(0, 0%, 83%)`     |
+
+![image](https://github.com/user-attachments/assets/5e3309f3-2fef-4bac-817f-c391704b884e)
+
+---
+
+### Exemplo Integrado
+
+```html
+<h3 style="color:red;">Nome de cor</h3>
+<h3 style="color:#00ff00;">Hexadecimal</h3>
+<h3 style="color:rgb(0,0,255);">RGB</h3>
+<h3 style="color:hsl(60, 100%, 50%);">HSL</h3>
+```
+
+---
+
+### Atividade
+
+1. Crie uma página HTML com 4 parágrafos, cada um com uma cor diferente utilizando:
+
+   * Um nome de cor
+   * Um código hexadecimal
+   * Um valor RGB
+   * Um valor HSL
+
+2. Aplique cores também no `background-color` de pelo menos um desses elementos.
+
+---
+
+Se quiser, posso criar um arquivo `.html` com todos esses exemplos comentados para uso em sala ou no repositório da disciplina. Deseja isso?
+
 
