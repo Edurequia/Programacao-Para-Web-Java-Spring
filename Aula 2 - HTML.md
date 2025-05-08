@@ -24,8 +24,7 @@ Exemplo básico:
 </body>
 </html>
 ```
-
----
+ 
 
 ### **Estrutura Básica de um Documento HTML**  
 Todo documento HTML possui uma estrutura fundamental:  
@@ -41,8 +40,7 @@ Todo documento HTML possui uma estrutura fundamental:
 
 4. **`<body>`**  
    - Contém o conteúdo visível da página (textos, imagens, links, etc.).  
-
----
+ 
 
 ### **Tags HTML Básicas**  
 Algumas das principais tags incluem:  
@@ -56,8 +54,7 @@ Algumas das principais tags incluem:
 | `<img>`     | Imagem                             | `<img src="imagem.jpg">`    |
 | `<ul>`, `<ol>`, `<li>` | Listas (não ordenadas/ordenadas) | `<ul><li>Item 1</li></ul>`  |
 | `<div>`     | Divisão/container genérico         | `<div>Conteúdo</div>`       |
-
----
+ 
 
 ### **Atributos HTML**  
 Atributos fornecem informações adicionais sobre elementos. Exemplos comuns:  
@@ -73,8 +70,7 @@ Atributos fornecem informações adicionais sobre elementos. Exemplos comuns:
 - **`alt`** – Texto alternativo para acessibilidade.  
 
 Ótimo! Vamos integrar essas informações ao material, organizando de forma didática. Segue a versão atualizada:
-
----
+ 
 
 ### **Estrutura Básica de um Documento HTML**  
 Todo arquivo HTML válido deve seguir este esqueleto:  
@@ -100,23 +96,20 @@ Todo arquivo HTML válido deve seguir este esqueleto:
 | `<meta charset="UTF-8">`   | Permite acentos, ç, emojis e caracteres especiais.                     |
 | `<meta name="viewport"...` | Adapta a página para telas de celulares e tablets.                     |
 | `<title>`                  | Define o título da aba/janela do navegador.                            |
-
----
+ 
 
 ### **Como os Navegadores Funcionam?**  
 Os navegadores (*browsers* como Chrome, Firefox, Edge) **não exibem as tags HTML**, mas as usam para renderizar o conteúdo corretamente.  >
 
 ![image](https://github.com/user-attachments/assets/fdd5fe09-61e0-4318-956d-3af37771825a)
-
----
+ 
 
 ### **Estrutura da pagina HTML**  
 
 Abaixo uma visualização da estrutura de uma pagina HTML.
 
 ![image](https://github.com/user-attachments/assets/ecc8f0b3-ca65-4a52-9459-6ad1162622b1)
-
---- 
+  
 
 ### Atividade: 
 
@@ -128,8 +121,7 @@ Criar um mini currículo pessoal em HTML contendo:
 - Link para redes sociais
 
 Perfeito! Com base na sua ideia e na referência do W3Schools, aqui está a **Seção 2** do seu material didático, abordando **elementos HTML e seus atributos**, com explicações claras, exemplos comentados e estrutura didática:
-
----
+ 
 
 ## **Seção 2: Elementos HTML e Atributos**
 
@@ -153,8 +145,7 @@ Alguns elementos são **autofechados**, ou seja, não possuem conteúdo interno:
 <img src="foto.jpg" alt="Foto de perfil">
 <br>
 ```
-
----
+ 
 
 ### **O que são Atributos HTML?**
 
@@ -169,8 +160,7 @@ Atributos HTML fornecem **informações adicionais** sobre os elementos. Eles s�
 * Sempre aparecem na tag de abertura.
 * São compostos por um **nome** e um **valor**.
 * Os valores devem estar entre **aspas duplas** `" "`.
-
----
+ 
 
 ### **Principais Atributos HTML e Exemplos**
 
@@ -193,8 +183,7 @@ O atributo `src` especifica o **caminho para o arquivo de imagem** que será exi
 ##### **Formas de especificar o valor de `src`:**
 
 Existem duas formas principais de informar o caminho da imagem:
-
----
+ 
 
 **1. URL Absoluta**
 
@@ -209,8 +198,7 @@ Existem duas formas principais de informar o caminho da imagem:
 >
 > * Imagens externas podem estar protegidas por direitos autorais. Usá-las sem permissão pode violar leis de copyright.
 > * Você **não tem controle** sobre imagens externas – elas podem ser removidas ou alteradas a qualquer momento, quebrando sua página.
-
----
+ 
 
 **2. URL Relativa**
 
@@ -231,8 +219,7 @@ Existem duas formas principais de informar o caminho da imagem:
 
 > 💡 **Dica:**
 > Prefira **URLs relativas**. Elas são mais seguras e **não quebram** caso o domínio do site seja alterado ou movido para outro servidor.
-
----
+ 
 
 #### `width` e `height` (em `<img>`)
 
@@ -273,8 +260,7 @@ Mostra uma **dica flutuante** (tooltip) quando o mouse passa sobre o elemento.
 ```html
 <p title="Este é um parágrafo explicativo.">Passe o mouse aqui</p>
 ```
-
----
+ 
 
 ### **Resumo: Atributos Comuns e Sua Utilização**
 
@@ -287,8 +273,7 @@ Mostra uma **dica flutuante** (tooltip) quando o mouse passa sobre o elemento.
 | `style`        | Todos     | Aplicar CSS inline                                  |
 | `lang`         | `<html>`  | Define o idioma do documento                        |
 | `title`        | Todos     | Exibe uma dica sobre o conteúdo                     |
-
----
+ 
 
 ### **Exemplo Integrado**
 
@@ -315,8 +300,7 @@ Mostra uma **dica flutuante** (tooltip) quando o mouse passa sobre o elemento.
 
 ![image](https://github.com/user-attachments/assets/3e69415f-3f91-4c5e-bd69-e8e7c5473a0c)
 
-
----
+ 
 
 ### **Atividade Prática – Mini Currículo com Atributos**
 
@@ -340,8 +324,7 @@ Agora que você aprendeu sobre **elementos HTML** e seus **atributos mais comuns
 * Utilize **URL relativa** para a imagem (por exemplo: `src="minhafoto.jpg"`).
 * Adicione `lang="pt-BR"` no elemento `<html>` e `meta charset="UTF-8"` no `<head>`.
 * O uso de `style` inline é opcional, mas pode ser usado para personalização simples.
-
----
+ 
 
 ## **Seção 3: Estilos (Styles) e Formatação (Formatting)**
 
@@ -431,8 +414,7 @@ Reabra o exercício do mini currículo e:
 1. Aplique pelo menos **três estilos diferentes** utilizando o atributo `style` (ex: cor, tamanho, alinhamento).
 2. Utilize **três ou mais tags de formatação** de texto, como `<strong>`, `<em>`, `<mark>`, `<sub>` ou `<sup>`.
 3. Mantenha a estrutura HTML válida e organizada.
-
----
+ 
 
 ## **Seção 4: Cores em HTML**
 
@@ -448,8 +430,7 @@ Existem **quatro principais formas** de definir cores no HTML (via CSS):
 2. **Códigos Hexadecimais (Hex)**
 3. **Modelo RGB (Red, Green, Blue)**
 4. **Modelo HSL (Hue, Saturation, Lightness)**
-
----
+ 
 
 ### 1. Usando Nomes de Cores
 
@@ -460,8 +441,7 @@ Você pode usar **nomes de cores pré-definidos**, como `red`, `blue`, `green`, 
 ```
 
 > Existem mais de 140 nomes de cores definidos oficialmente.
-
----
+ 
 
 ### 2. Usando Códigos Hexadecimais
 
@@ -480,8 +460,7 @@ Exemplo: `#RRGGBB`, onde:
 * `#ffffff` → branco
 * `#00ff00` → verde
 * `#0000ff` → azul
-
----
+ 
 
 ### 3. Usando o Modelo RGB
 
@@ -494,8 +473,7 @@ O RGB define a cor com três valores numéricos de 0 a 255.
 * `rgb(255, 0, 0)` → vermelho
 * `rgb(0, 255, 0)` → verde
 * `rgb(0, 0, 255)` → azul
-
----
+ 
 
 ### 4. Usando o Modelo HSL
 
@@ -508,8 +486,7 @@ HSL significa Hue (matiz), Saturation (saturação) e Lightness (luminosidade).
 * Matiz (Hue): cor básica em graus (0°=vermelho, 120°=verde, 240°=azul)
 * Saturação: intensidade da cor (0% a 100%)
 * Luminosidade: brilho da cor (0% escuro, 100% claro)
-
----
+ 
 
 ### Comparando os Formatos
 
@@ -519,8 +496,7 @@ HSL significa Hue (matiz), Saturation (saturação) e Lightness (luminosidade).
 | Hex     | `color: #ff0000`           | Muito usado em design gráfico          |
 | RGB     | `color: rgb(255, 0, 0)`    | Boa legibilidade para ajustes finos    |
 | HSL     | `color: hsl(0, 100%, 50%)` | Ideal para manipulação de paletas      |
-
----
+ 
 
 ### Tabela Visual de Cores
 
@@ -533,8 +509,7 @@ HSL significa Hue (matiz), Saturation (saturação) e Lightness (luminosidade).
 | Cinza Claro | `lightgray` | `#d3d3d3`   | `rgb(211,211,211)` | `hsl(0, 0%, 83%)`     |
 
 ![image](https://github.com/user-attachments/assets/5e3309f3-2fef-4bac-817f-c391704b884e)
-
----
+ 
 
 ### Exemplo Integrado
 
@@ -544,8 +519,7 @@ HSL significa Hue (matiz), Saturation (saturação) e Lightness (luminosidade).
 <h3 style="color:rgb(0,0,255);">RGB</h3>
 <h3 style="color:hsl(60, 100%, 50%);">HSL</h3>
 ```
-
----
+ 
 
 ### Atividade
 
