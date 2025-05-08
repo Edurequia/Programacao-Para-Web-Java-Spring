@@ -69,8 +69,6 @@ Atributos fornecem informações adicionais sobre elementos. Exemplos comuns:
   ```
 - **`alt`** – Texto alternativo para acessibilidade.  
 
-Ótimo! Vamos integrar essas informações ao material, organizando de forma didática. Segue a versão atualizada:
- 
 
 ### **Estrutura Básica de um Documento HTML**  
 Todo arquivo HTML válido deve seguir este esqueleto:  
@@ -120,9 +118,6 @@ Criar um mini currículo pessoal em HTML contendo:
 - Lista de habilidades
 - Link para redes sociais
 
-Perfeito! Com base na sua ideia e na referência do W3Schools, aqui está a **Seção 2** do seu material didático, abordando **elementos HTML e seus atributos**, com explicações claras, exemplos comentados e estrutura didática:
- 
-
 ## **Seção 2: Elementos HTML e Atributos**
 
 ### **O que é um Elemento HTML?**
@@ -169,7 +164,7 @@ Atributos HTML fornecem **informações adicionais** sobre os elementos. Eles s�
 Especifica o destino de um link.
 
 ```html
-<a href="https://www.w3schools.com">Visite o W3Schools</a>
+<a href="https://www.google.com">Visite o Google</a>
 ```
 
 #### `src` (em `<img>`)
@@ -191,7 +186,7 @@ Existem duas formas principais de informar o caminho da imagem:
 * Inclui o protocolo (https) e o nome do domínio.
 
 ```html
-<img src="https://www.w3schools.com/images/img_girl.jpg" alt="Imagem externa">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png" alt="Imagem externa">
 ```
 
 > ⚠️ **Atenção:**
@@ -300,8 +295,6 @@ Mostra uma **dica flutuante** (tooltip) quando o mouse passa sobre o elemento.
 
 ![image](https://github.com/user-attachments/assets/3e69415f-3f91-4c5e-bd69-e8e7c5473a0c)
 
- 
-
 ### **Atividade Prática – Mini Currículo com Atributos**
 
 Agora que você aprendeu sobre **elementos HTML** e seus **atributos mais comuns**, **refaça a atividade** criando uma página HTML com as seguintes informações:
@@ -325,7 +318,6 @@ Agora que você aprendeu sobre **elementos HTML** e seus **atributos mais comuns
 * Adicione `lang="pt-BR"` no elemento `<html>` e `meta charset="UTF-8"` no `<head>`.
 * O uso de `style` inline é opcional, mas pode ser usado para personalização simples.
  
-
 ## **Seção 3: Estilos (Styles) e Formatação (Formatting)**
 
 ### Estilos com HTML
