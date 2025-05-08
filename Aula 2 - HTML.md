@@ -558,8 +558,5 @@ HSL significa Hue (matiz), Saturation (saturação) e Lightness (luminosidade).
 
 2. Aplique cores também no `background-color` de pelo menos um desses elementos.
 
----
-
-Se quiser, posso criar um arquivo `.html` com todos esses exemplos comentados para uso em sala ou no repositório da disciplina. Deseja isso?
 
 
