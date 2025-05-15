@@ -130,11 +130,23 @@ seletor {
 
 ### Exemplo:
 
-```css
-p {
-  color: red;
-  text-align: center;
-}
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo de Sintaxe CSS</title>
+</head>
+<body>
+
+  <h1 id="titulo">Título Principal</h1>
+  <h2>Subtítulo</h2>
+  <p>Este é um parágrafo com estilo padrão.</p>
+  <p class="destaque">Este parágrafo possui a classe "destaque".</p>
+
+</body>
+</html>
 ```
 
 Nesse exemplo:
@@ -288,6 +300,45 @@ Utilize comentários para documentar seu código, especialmente em projetos maio
 ## Elementos Básicos do CSS: `background`
 
 O plano de fundo de um elemento pode ser estilizado com **cores sólidas**, **imagens**, **gradientes** e **propriedades combinadas**. Essas técnicas ajudam a destacar seções, organizar visualmente a página e melhorar a experiência do usuário.
+
+```html
+<body>
+
+  <div class="exemplo exemplo1">
+    <p>Exemplo 1: background-color (lightblue)</p>
+  </div>
+
+  <div class="exemplo exemplo2">
+    <p>Exemplo 2: background-color com hexadecimal (#f0f0f0)</p>
+  </div>
+
+  <div class="exemplo exemplo3">
+    <p>Exemplo 3: background-color com rgba (vermelho transparente)</p>
+  </div>
+
+  <div class="exemplo exemplo4">
+    <p>Exemplo 4: background-image com repetição</p>
+  </div>
+
+  <div class="exemplo exemplo5">
+    <p>Exemplo 5: background-image centralizada, sem repetição</p>
+  </div>
+
+  <div class="exemplo exemplo6">
+    <p>Exemplo 6: background com gradiente em ângulo (135deg)</p>
+  </div>
+
+  <div class="exemplo exemplo7">
+    <p>Exemplo 7: gradiente horizontal (to right)</p>
+  </div>
+
+  <div class="exemplo exemplo8">
+    <p>Exemplo 8: gradiente vertical (to bottom)</p>
+  </div>
+
+</body>
+```
+
 
 ### 1. `background-color`
 
@@ -579,7 +630,6 @@ No CSS, o **tamanho e espaçamento dos elementos** são controlados principalmen
 * `width`: **largura** do elemento.
 * `height`: **altura** do elemento.
 
- 
 
 ### `margin`
 
@@ -673,7 +723,84 @@ div {
 </div>
 ```
 
- 
+
+ ```html
+ <div class="exemplo ex-margin">
+    <div class="titulo">Exemplo: margin</div>
+    <div class="conteudo">
+        Esta `div` possui <code>margin: 40px</code>.
+        Ela se afasta de outros elementos ao seu redor.
+    </div>
+</div>
+
+<div class="exemplo ex-padding">
+    <div class="titulo">Exemplo: padding</div>
+    <div class="conteudo">
+        Esta `div` possui <code>padding: 30px</code>.
+        O conteúdo tem mais espaço interno entre ele e a borda.
+    </div>
+</div>
+
+<div class="exemplo ex-width">
+    <div class="titulo">Exemplo: width</div>
+    <div class="conteudo">
+        Esta `div` possui <code>width: 300px</code>.
+        A largura do elemento foi definida manualmente.
+    </div>
+</div>
+
+<div class="exemplo ex-height">
+    <div class="titulo">Exemplo: height</div>
+    <div class="conteudo">
+        Esta `div` possui <code>height: 100px</code>.
+        A altura do elemento foi definida manualmente.
+    </div>
+</div>
+``` 
+
+```css
+   body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f4f4f4;
+        }
+
+        .exemplo {
+            border: 2px solid #999;
+            margin-bottom: 30px;
+            background-color: #fff;
+        }
+
+        .titulo {
+            background-color: #eee;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .conteudo {
+            padding: 10px;
+        }
+
+        .ex-margin {
+            background-color: #fdd;
+            margin: 40px;
+        }
+
+        .ex-padding {
+            background-color: #dfd;
+            padding: 30px;
+        }
+
+        .ex-width {
+            background-color: #d0e0f0;
+            width: 300px;
+        }
+
+        .ex-height {
+            background-color: #f0d0f0;
+            height: 100px;
+        }
+```
 
 ## Diferença visual entre margin e padding
 
@@ -710,13 +837,11 @@ Claro! Abaixo está a seção completa e didática sobre **`position` e `align` 
 
  
 
-## Controle de Posição e Alinhamento no CSS
-
-### Parte 1: `position`
+## Controle de Posição 
 
 A propriedade `position` define **como um elemento HTML é posicionado no documento**. Ela funciona em conjunto com as propriedades `top`, `right`, `bottom` e `left`.
 
-#### 1. `static` (padrão)
+### 1. `static` (padrão)
 
 * É o valor padrão.
 * Os elementos são posicionados de forma "normal", seguindo o fluxo do HTML.
@@ -728,7 +853,7 @@ div {
 }
 ```
 
-#### 2. `relative`
+### 2. `relative`
 
 * Posiciona o elemento **relativamente à sua posição original**.
 * Ele continua ocupando o mesmo espaço no fluxo do documento.
@@ -741,7 +866,7 @@ div {
 }
 ```
 
-#### 3. `absolute`
+### 3. `absolute`
 
 * Remove o elemento do fluxo normal da página.
 * Ele é posicionado **em relação ao elemento pai mais próximo com `position: relative`** (ou ao `<html>` se não houver pai posicionado).
@@ -754,7 +879,7 @@ div {
 }
 ```
 
-#### 4. `fixed`
+### 4. `fixed`
 
 * O elemento é fixado em um lugar da tela, **mesmo durante o scroll da página**.
 * Muito usado em menus fixos e botões “voltar ao topo”.
@@ -767,7 +892,7 @@ div {
 }
 ```
 
-#### 5. `sticky`
+### 5. `sticky`
 
 * Combina características de `relative` e `fixed`.
 * O elemento se comporta como `relative` até atingir um limite (ex: topo da página), e então passa a agir como `fixed`.
@@ -780,9 +905,113 @@ h2 {
 }
 ```
 
- 
+```html
+<body>
 
-## Parte 2: Alinhamento
+<h2 class="sticky-header">Cabeçalho Sticky: Fixa ao topo quando rolar</h2>
+
+<div class="exemplo static">
+    <strong>Position: static (padrão)</strong><br>
+    Este elemento segue o fluxo normal do HTML.
+</div>
+
+<div class="exemplo relative">
+    <strong>Position: relative</strong><br>
+    Este bloco foi deslocado <code>top: 20px</code> e <code>left: 15px</code>, mas continua ocupando seu espaço original.
+</div>
+
+<div class="container">
+    <strong>Contêiner com position: relative</strong>
+    <div class="absolute">
+        Position: absolute<br>
+        Este bloco é posicionado em relação ao contêiner pai.
+    </div>
+</div>
+
+<div class="conteudo">
+    Role para ver o botão fixo no canto inferior direito...
+</div>
+
+<div class="fixed">
+    Position: fixed<br>
+    Este bloco fica fixo na tela, mesmo ao rolar.
+</div>
+
+</body>
+```
+
+```css
+body {
+            font-family: Arial, sans-serif;
+            padding: 60px 20px;
+        }
+
+        .exemplo {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 2px solid #ccc;
+            background-color: #f9f9f9;
+            position: static;
+        }
+
+        /* STATIC */
+        .static {
+            position: static;
+        }
+
+        /* RELATIVE */
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 15px;
+            background-color: #e3f2fd;
+        }
+
+        /* ABSOLUTE dentro de container com position: relative */
+        .container {
+            position: relative;
+            height: 150px;
+            background-color: #f0f0f0;
+            border: 1px dashed #999;
+            margin-bottom: 50px;
+        }
+
+        .absolute {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ffebee;
+            padding: 10px;
+            border: 1px solid red;
+        }
+
+        /* FIXED */
+        .fixed {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: #c8e6c9;
+            padding: 10px;
+            border: 1px solid green;
+        }
+
+        /* STICKY */
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            background-color: #fff59d;
+            padding: 10px;
+            border-bottom: 2px solid #fbc02d;
+        }
+
+        /* Conteúdo para scroll */
+        .conteudo {
+            height: 800px;
+        }
+```
+
+ 
+## Controle de Alinhamento
 
 A seguir, vamos abordar as propriedades que controlam o alinhamento de texto e blocos.
 
@@ -878,8 +1107,142 @@ HTML correspondente:
 * `justify-content: center` centraliza o conteúdo **na horizontal**.
 * `align-items: center` centraliza o conteúdo **na vertical**.
 * O contêiner precisa de uma **altura definida** para que a centralização vertical funcione corretamente.
+  
+```html
+<body>
 
- 
+<div class="exemplo text-center">
+    <div class="titulo">text-align: center</div>
+    <p>Este parágrafo está centralizado horizontalmente.</p>
+</div>
+
+<div class="exemplo text-right">
+    <div class="titulo">text-align: right</div>
+    <p>Este parágrafo está alinhado à direita.</p>
+</div>
+
+<div class="exemplo text-justify">
+    <div class="titulo">text-align: justify</div>
+    <p>
+        Este parágrafo está justificado. O texto se ajusta às margens laterais,
+        criando um visual uniforme em ambas as bordas do bloco de texto.
+    </p>
+</div>
+
+<div class="exemplo text-last">
+    <div class="titulo">text-align-last: right</div>
+    <p>
+        Este parágrafo tem alinhamento justificado, mas sua última linha está alinhada à direita.
+    </p>
+</div>
+
+<div class="exemplo">
+    <div class="titulo">vertical-align: middle</div>
+    <p class="linha">
+        <img src="https://img.icons8.com/color/512/google-logo.png" width="30" class="inline-img">
+        Imagem alinhada ao centro vertical da linha de texto.
+    </p>
+</div>
+
+<div class="exemplo linha-alta">
+    <div class="titulo">line-height: 2.5</div>
+    <p>Este parágrafo tem espaçamento maior entre as linhas, facilitando a leitura.</p>
+    <p>O valor <code>line-height</code> foi definido como <strong>2.5</strong>.</p>
+</div>
+
+<div class="exemplo rtl">
+    <div class="titulo">direction: rtl</div>
+    <p>Este texto está sendo exibido da direita para a esquerda.</p>
+</div>
+
+<div class="exemplo bidi">
+    <div class="titulo">unicode-bidi: bidi-override</div>
+    <p>Este texto está forçando a inversão da ordem com `bidi-override`.</p>
+</div>
+
+<div class="exemplo flexbox-container">
+    <p>Centralizado com Flexbox</p>
+</div>
+
+</body>
+```
+
+```css
+body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .exemplo {
+            border: 1px solid #ccc;
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+
+        .titulo {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Text-align */
+        .text-left {
+            text-align: left;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-justify {
+            text-align: justify;
+        }
+
+        /* Text-align-last */
+        .text-last {
+            text-align: justify;
+            text-align-last: right;
+        }
+
+        /* Vertical-align */
+        .linha {
+            border: 1px dashed #999;
+            height: 40px;
+        }
+
+        .inline-img {
+            vertical-align: middle;
+        }
+
+        /* Line-height */
+        .linha-alta {
+            line-height: 2.5;
+        }
+
+        /* Direction e Unicode-bidi */
+        .rtl {
+            direction: rtl;
+        }
+
+        .bidi {
+            direction: rtl;
+            unicode-bidi: bidi-override;
+        }
+
+        /* Flexbox */
+        .flexbox-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120px;
+            border: 2px dashed #999;
+            background-color: #eef;
+        }
+```
 
 ## Exercício Prático
 
@@ -901,6 +1264,7 @@ HTML correspondente:
 1. Aplique `text-align: center` nos títulos.
 2. Ajuste o `line-height` dos parágrafos para melhorar a leitura.
 3. Experimente `vertical-align` em uma imagem com texto ao lado.
+
 
 ## Estilizando Tabelas com CSS
 
