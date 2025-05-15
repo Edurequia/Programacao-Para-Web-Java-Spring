@@ -11,10 +11,9 @@ CSS **economiza muito trabalho**. Ele pode controlar o layout de várias página
 Elementos HTML podem ser exibidos de forma diferente, dependendo do **dispositivo** ou **tamanho da tela**.
 Com o CSS, é possível adaptar a exibição de uma página para **diferentes tipos de dispositivos**, como telas grandes, pequenas ou impressoras.
 
-### Exemplo simples de CSS
-#### Estilo 1
+### Estilo 1
 ![image](https://github.com/user-attachments/assets/5f71e2af-dbde-46a7-adb8-a744887a9ab2)
-#### Estilo 2
+### Estilo 2
 ![image](https://github.com/user-attachments/assets/3eccf5f5-6f3d-418b-96a1-303b6ebe5929)
 
 ## Como Usar CSS
