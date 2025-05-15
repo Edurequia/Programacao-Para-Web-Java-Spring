@@ -463,17 +463,6 @@ header {
    * `#formacao` ou `#experiencia` (IDs de seções específicas)
 
 3. Comente ao lado de cada regra explicando o que ela faz.
-
-Perfeito! Vamos construir uma seção **completa e didática sobre bordas (borders) em CSS**, incluindo:
-
-* tipos de bordas,
-* propriedades de largura, cor e lados,
-* uso de bordas arredondadas (`border-radius`),
-* a propriedade `border` no formato *shorthand*,
-* e um exercício prático baseado no currículo dos alunos.
-
-A seção também inclui exemplos semelhantes à imagem que você enviou.
-
  
 
 ## Elementos Básicos do CSS: `border`
