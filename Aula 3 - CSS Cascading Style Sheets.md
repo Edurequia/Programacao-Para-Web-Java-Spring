@@ -1,4 +1,4 @@
-# CSS Cascading Style Sheets
+  # CSS Cascading Style Sheets
 
 ## Introdução ao CSS
 
@@ -1341,4 +1341,100 @@ input[type=submit]:hover {
    * Campo de busca com `transition` (opcional)
 
 3. Comente seu CSS explicando cada estilo aplicado.
+
+## Alternando Estilos com JavaScript
+
+Em muitos sites modernos, é comum oferecer ao usuário a possibilidade de escolher entre **modo claro (light)** e **modo escuro (dark)**.
+Com um pouco de JavaScript, é possível trocar o **arquivo de CSS** dinamicamente para alterar o tema da página.
+
+### Exemplo básico
+
+No `<head>` do seu HTML, você deve ter um link apontando para o arquivo de estilos:
+
+```html
+<link id="theme" rel="stylesheet" href="estilo-light.css">
+```
+
+A seguir, crie um script com a função que troca o estilo:
+
+```html
+<script>
+  function changeStyle(sheet) {
+    document.getElementById('theme').href = sheet;
+  }
+</script>
+```
+
+Depois, crie os botões que o usuário pode clicar para alternar os temas:
+
+```html
+<button onclick="changeStyle('estilo-light.css')">Modo Claro</button>
+<button onclick="changeStyle('estilo-dark.css')">Modo Escuro</button>
+```
+
+### Estrutura completa no HTML
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Currículo</title>
+  <link id="theme" rel="stylesheet" href="estilo-light.css">
+</head>
+<body>
+
+  <h1>Meu Currículo</h1>
+  <p>Informações pessoais, formação, experiências...</p>
+
+  <button onclick="changeStyle('estilo-light.css')">🌞 Modo Claro</button>
+  <button onclick="changeStyle('estilo-dark.css')">🌙 Modo Escuro</button>
+
+  <script>
+    function changeStyle(sheet) {
+      document.getElementById('theme').href = sheet;
+    }
+  </script>
+</body>
+</html>
+```
+
+---
+
+## Atividade Final
+
+**Objetivo:** Criar duas versões estilizadas do seu currículo — uma clara e uma escura — e permitir a troca entre elas com JavaScript.
+
+### Instruções:
+
+1. Crie dois arquivos CSS:
+
+   * `estilo-light.css` com fundo claro, texto escuro e visual tradicional.
+   * `estilo-dark.css` com fundo escuro, texto claro e estilo contrastante.
+
+2. No HTML do seu currículo:
+
+   * Adicione o elemento `<link id="theme">` com o `href` inicial apontando para `estilo-light.css`.
+   * Crie dois botões para alternar entre os estilos.
+
+3. Adicione o script com a função `changeStyle()` como mostrado acima.
+
+4. Personalize cada tema:
+
+   * Light: use cores como `#ffffff`, `#f5f5f5`, `#222222`.
+   * Dark: use cores como `#121212`, `#333333`, `#e0e0e0`.
+
+**Extra (opcional):** adicione um `:hover` nos botões ou troque ícones para melhorar a experiência.
+
+Claro! Abaixo está a **última seção da aula: Referências**, formatada de forma clara e adequada, com os materiais que você indicou, a W3Schools (como principal base online), e também **uma sugestão adicional** de referência didática amplamente usada na área — o livro do **Maurício Samy Silva**, que é um clássico para ensino de HTML/CSS no Brasil.
+
+---
+
+## Referências
+
+ZEMEL, Tárcio. *CSS eficiente: técnicas e ferramentas que fazem a diferença nos seus estilos*. São Paulo, SP: Casa do Código, 2015. E-book. Disponível em: [https://plataforma.bvirtual.com.br](https://plataforma.bvirtual.com.br). 
+
+FRASSON, Rosicléia. *Turbine seu CSS: folhas de estilo inteligentes com Sass*. São Paulo, SP: Casa do Código, 2016. E-book. Disponível em: [https://plataforma.bvirtual.com.br](https://plataforma.bvirtual.com.br). 
+
+W3Schools. *CSS Tutorial*. Disponível em: [https://www.w3schools.com/css/](https://www.w3schools.com/css/). Acesso em: 15 maio 2025.
 
