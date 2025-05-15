@@ -1250,6 +1250,9 @@ input[type=submit]:hover {
 
 ## Exemplo Final Combinado
 
+![image](https://github.com/user-attachments/assets/598644d2-47a7-4719-9e0c-7dd43bf0df02)
+
+
 ```html
 <form>
   <label for="nome">Nome:</label>
