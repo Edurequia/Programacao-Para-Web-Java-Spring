@@ -17,6 +17,108 @@ Com o CSS, é possível adaptar a exibição de uma página para **diferentes ti
 #### Estilo 2
 ![image](https://github.com/user-attachments/assets/3eccf5f5-6f3d-418b-96a1-303b6ebe5929)
 
+## Como Usar CSS
+
+Existem três maneiras principais de aplicar CSS a documentos HTML. Cada uma tem suas características, e a escolha adequada depende da organização e do tamanho do projeto.
+
+### 1. CSS Externo
+
+O CSS externo é definido em um arquivo separado com a extensão `.css`. Esse arquivo é então referenciado no HTML com a tag `<link>` dentro do elemento `<head>`.
+
+```html
+<head>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+```
+
+Arquivo `estilo.css`:
+
+```css
+body {
+  background-color: lightblue;
+}
+```
+
+**Vantagens:**
+
+* Permite reutilização de estilos em várias páginas.
+* Mantém o HTML limpo e organizado.
+* Facilita a manutenção e a colaboração em equipe.
+
+É a forma **mais recomendada** para projetos reais e páginas com múltiplas seções.
+
+ 
+
+### 2. CSS Interno
+
+O CSS interno é definido dentro do próprio documento HTML, utilizando a tag `<style>` no cabeçalho (`<head>`).
+
+```html
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+```
+
+**Vantagens:**
+
+* Útil para páginas únicas ou testes rápidos.
+* Código CSS e HTML ficam no mesmo arquivo.
+
+**Desvantagens:**
+
+* Pode dificultar a manutenção se o código CSS crescer.
+
+ 
+
+### 3. CSS Inline
+
+O CSS inline é inserido diretamente no elemento HTML, usando o atributo `style`.
+
+```html
+<p style="color:red;">Este parágrafo está em vermelho</p>
+```
+
+**Vantagens:**
+
+* Aplicação rápida e direta.
+
+**Desvantagens:**
+
+* Não reutilizável.
+* Dificulta a leitura e manutenção do código.
+* Deve ser **evitado em projetos maiores**.
+
+ 
+
+### Ordem de Prioridade (Cascade Order)
+
+Quando diferentes formas de CSS são aplicadas ao mesmo elemento, a **ordem de cascata** determina qual estilo será aplicado.
+
+A prioridade é a seguinte (da menor para a maior):
+
+1. CSS Externo
+2. CSS Interno
+3. CSS Inline
+
+Ou seja, o CSS inline **sobrepõe** o CSS interno e externo. O CSS interno **sobrepõe** o externo.
+
+Além da forma de inserção, a **especificidade do seletor** (ID > Classe > Elemento) também influencia. Por exemplo, um seletor `#id` tem mais prioridade que `.classe`.
+
+Exemplo de prioridade:
+
+```html
+<p id="exemplo" class="texto" style="color: red;">Texto</p>
+```
+
+* `color: red` no `style` será aplicado mesmo que exista `#exemplo { color: blue; }` no CSS.
+
+Essa lógica é importante para entender por que certos estilos “não funcionam” — geralmente estão sendo sobrescritos por outro com maior prioridade.
+
+
 ## Sintaxe do CSS
 
 A sintaxe básica do CSS é formada por um **seletor** e um **bloco de declaração**.
@@ -134,110 +236,7 @@ Seleciona todos os `<p>` que estão dentro de um `<div>`.
    * **Seletor de ID:** Aplique um fundo diferente à seção com `id="experiencia"`.
    * **Seletor de Classe:** Altere a fonte dos parágrafos com `class="descricao"`.
    * **Seletor de Descendente:** Mude a cor do texto dos `<li>` que estão dentro de uma `<ul>` com `class="habilidades"`.
-
-## Como Usar CSS
-
-Existem três maneiras principais de aplicar CSS a documentos HTML. Cada uma tem suas características, e a escolha adequada depende da organização e do tamanho do projeto.
-
-### 1. CSS Externo
-
-O CSS externo é definido em um arquivo separado com a extensão `.css`. Esse arquivo é então referenciado no HTML com a tag `<link>` dentro do elemento `<head>`.
-
-```html
-<head>
-  <link rel="stylesheet" href="estilo.css">
-</head>
-```
-
-Arquivo `estilo.css`:
-
-```css
-body {
-  background-color: lightblue;
-}
-```
-
-**Vantagens:**
-
-* Permite reutilização de estilos em várias páginas.
-* Mantém o HTML limpo e organizado.
-* Facilita a manutenção e a colaboração em equipe.
-
-É a forma **mais recomendada** para projetos reais e páginas com múltiplas seções.
-
  
-
-### 2. CSS Interno
-
-O CSS interno é definido dentro do próprio documento HTML, utilizando a tag `<style>` no cabeçalho (`<head>`).
-
-```html
-<head>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-  </style>
-</head>
-```
-
-**Vantagens:**
-
-* Útil para páginas únicas ou testes rápidos.
-* Código CSS e HTML ficam no mesmo arquivo.
-
-**Desvantagens:**
-
-* Pode dificultar a manutenção se o código CSS crescer.
-
- 
-
-### 3. CSS Inline
-
-O CSS inline é inserido diretamente no elemento HTML, usando o atributo `style`.
-
-```html
-<p style="color:red;">Este parágrafo está em vermelho</p>
-```
-
-**Vantagens:**
-
-* Aplicação rápida e direta.
-
-**Desvantagens:**
-
-* Não reutilizável.
-* Dificulta a leitura e manutenção do código.
-* Deve ser **evitado em projetos maiores**.
-
- 
-
-## Ordem de Prioridade (Cascade Order)
-
-Quando diferentes formas de CSS são aplicadas ao mesmo elemento, a **ordem de cascata** determina qual estilo será aplicado.
-
-A prioridade é a seguinte (da menor para a maior):
-
-1. CSS Externo
-2. CSS Interno
-3. CSS Inline
-
-Ou seja, o CSS inline **sobrepõe** o CSS interno e externo. O CSS interno **sobrepõe** o externo.
-
-Além da forma de inserção, a **especificidade do seletor** (ID > Classe > Elemento) também influencia. Por exemplo, um seletor `#id` tem mais prioridade que `.classe`.
-
-Exemplo de prioridade:
-
-```html
-<p id="exemplo" class="texto" style="color: red;">Texto</p>
-```
-
-* `color: red` no `style` será aplicado mesmo que exista `#exemplo { color: blue; }` no CSS.
-
-Essa lógica é importante para entender por que certos estilos “não funcionam” — geralmente estão sendo sobrescritos por outro com maior prioridade.
-
- 
-
 ## Comentários em CSS
 
 Comentários são usados para explicar partes do código ou desativar regras temporariamente. Eles são ignorados pelo navegador e não afetam a exibição da página.
