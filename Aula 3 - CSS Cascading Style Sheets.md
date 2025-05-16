@@ -817,15 +817,6 @@ div {
 
 3. Adicione **comentários explicando** por que cada espaçamento foi usado.
 
-Claro! Abaixo está a seção completa e didática sobre **`position` e `align` no CSS**, abordando:
-
-* os cinco valores da propriedade `position`,
-* todas as propriedades de alinhamento tratadas em [W3Schools - CSS Align](https://www.w3schools.com/css/css_align.asp),
-* explicações, exemplos claros,
-* e um **exercício prático** para aplicação no currículo dos alunos.
-
- 
-
 ## Controle de Posição 
 
 A propriedade `position` define **como um elemento HTML é posicionado no documento**. Ela funciona em conjunto com as propriedades `top`, `right`, `bottom` e `left`.
