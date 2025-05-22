@@ -421,7 +421,7 @@ O `linear-gradient()` permite criar transições suaves entre duas ou mais cores
 ```css
 body {
   background: linear-gradient(135deg, #ffffff, #e0f0ff, #cce0f5, #b3d1f0);
-  margin: 0;
+  min-height: 100vh;
 }
 ```
 
@@ -429,6 +429,7 @@ Neste exemplo:
 
 * `135deg` define o ângulo do gradiente.
 * A sequência de cores será misturada suavemente.
+* min-height: 100vh; → garante que o body tenha no mínimo a altura total da tela, mesmo sem conteúdo.
 
 Outros exemplos:
 
@@ -706,13 +707,6 @@ div {
 
 ### Exemplo completo
 
-```html
-<div style="width: 300px; height: 100px; background-color: lightgray; padding: 15px; margin: 20px;">
-  Este é um bloco com width, height, padding e margin definidos.
-</div>
-```
-
-
  ```html
  <div class="exemplo ex-margin">
     <div class="titulo">Exemplo: margin</div>
@@ -989,7 +983,6 @@ body {
             height: 800px;
         }
 ```
-
  
 ## Controle de Alinhamento
 
@@ -1224,6 +1217,64 @@ body {
         }
 ```
 
+```html
+<body>
+<div style="text-align: center;">
+    Texto centralizado
+</div>
+
+<div style="width: 100%; text-align: center;  background-color: #494949; padding: 10px;">
+    <div style="width: 200px; margin: 0 auto; background-color: #999999">Elemento centralizado</div>
+</div>
+
+<!--
+justify-content: center → centraliza horizontalmente
+align-items: center → centraliza verticalmente
+-->
+<div style="display: flex; justify-content: center; align-items: center; height: 200px; background-color: #999999; margin: 10px">
+    <div>Centralizado ao centro</div>
+</div>
+
+<!-- Centralizar com Grid Layout  -->
+<div style="display: grid; place-items: center; height: 200px; background-color: #6a6a6a; margin: 10px">
+    <div>Centralizado com Grid</div>
+</div>
+
+<!-- Centralizar com posição absoluta (antigo, mas ainda usado em alguns casos)  -->
+<div style="position: relative; height: 200px; background-color: #a5a5a5; margin: 10px">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        Centralizado
+    </div>
+</div>
+
+<!--
+: flex → ativa o Flexbox
+flex-wrap: wrap → permite que os elementos quebrem para a próxima linha quando não houver mais espaço horizontal.
+ -->
+<div style="display: flex; flex-wrap: wrap;">
+    <div style="width: 200px; height: 100px; background: lightblue; margin: 5px;">Item 1</div>
+    <div style="width: 200px; height: 100px; background: lightcoral; margin: 5px;">Item 2</div>
+    <div style="width: 200px; height: 100px; background: lightgreen; margin: 5px;">Item 3</div>
+    <div style="width: 200px; height: 100px; background: #bd90ee; margin: 5px;">Item 4</div>
+    <div style="width: 200px; height: 100px; background: #ee90c5; margin: 5px;">Item 5</div>
+    <div style="width: 200px; height: 100px; background: #eede90; margin: 5px;">Item 6</div>
+    <div style="width: 200px; height: 100px; background: #fbfae9; margin: 5px;">Item 7</div>
+    <div style="width: 200px; height: 100px; background: #2e2e2e; margin: 5px;">Item 8</div>
+</div>
+
+<!--
+grid-template-columns: repeat(auto-fit, minmax(...)) → define colunas responsivas
+Os elementos se ajustam e quebram de linha automaticamente conforme o espaço disponível.
+-->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+    <div style="background: lightblue; height: 100px;">Item 1</div>
+    <div style="background: lightcoral; height: 100px;">Item 2</div>
+    <div style="background: lightgreen; height: 100px;">Item 3</div>
+</div>
+
+</body>
+```
+
 ## Exercício Prático
 
 **Objetivo:** Aplicar posicionamento e alinhamento em seções do currículo.
@@ -1338,65 +1389,94 @@ table {
 HTML correspondente:
 
 ```html
+<body>
+
 <div class="table-container">
-  <table>
-    <thead>
-      <tr>
-        <th>Nome</th>
-        <th>Cargo</th>
-        <th>Departamento</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>João</td>
-        <td>Desenvolvedor</td>
-        <td>TI</td>
-      </tr>
-      <tr>
-        <td>Ana</td>
-        <td>Designer</td>
-        <td>Criação</td>
-      </tr>
-    </tbody>
-  </table>
+    <table>
+        <caption>Lista de Funcionários</caption>
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Cargo</th>
+            <th>Departamento</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>João</td>
+            <td>Desenvolvedor</td>
+            <td>TI</td>
+        </tr>
+        <tr>
+            <td>Ana</td>
+            <td>Designer</td>
+            <td>Criação</td>
+        </tr>
+        <tr>
+            <td>Marcos</td>
+            <td>Analista</td>
+            <td>Financeiro</td>
+        </tr>
+        <tr>
+            <td>Sofia</td>
+            <td>Coordenadora</td>
+            <td>RH</td>
+        </tr>
+        </tbody>
+    </table>
 </div>
+
+</body>
 ```
 
 
 ### Exemplo completo de CSS para Tabela
 
 ```css
-.table-container {
-  overflow-x: auto;
-  margin-top: 20px;
-}
+ .table-container {
+            overflow-x: auto;
+            margin-top: 20px;
+        }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-  min-width: 600px;
-}
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 400px;
+            font-family: Arial, sans-serif;
+        }
 
-th, td {
-  border: 1px solid #ddd;
-  padding: 12px;
-  text-align: left;
-  height: 50px;
-}
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            height: 25px;
+        }
 
-th {
-  background-color: #4caf50;
-  color: white;
-}
+        th {
+            text-align: center;
+            vertical-align: middle;
+            background-color: #4caf50;
+            color: white;
+        }
 
-tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
+        td {
+            text-align: left;
+            vertical-align: top;
+        }
 
-tr:hover {
-  background-color: #e0f7fa;
-}
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #e0f7fa;
+        }
+
+        caption {
+            caption-side: top;
+            text-align: left;
+            padding: 10px;
+            font-weight: bold;
+        }
 ```
 
 ## Exercício Prático
