@@ -1387,7 +1387,7 @@ O elemento `<form>` serve como **contêiner principal** de todos os campos de en
 #### Sintaxe básica:
 
 ```html
-<form action="/processa.php" method="post">
+<form action="/processa" method="post">
   <!-- Campos aqui -->
 </form>
 ```
