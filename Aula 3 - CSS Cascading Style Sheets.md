@@ -1849,9 +1849,6 @@ Depois, crie os botões que o usuário pode clicar para alternar os temas:
    * Dark: use cores como `#121212`, `#333333`, `#e0e0e0`.
 
 **Extra (opcional):** adicione um `:hover` nos botões ou troque ícones para melhorar a experiência.
-
-Claro! Abaixo está a **última seção da aula: Referências**, formatada de forma clara e adequada, com os materiais que você indicou, a W3Schools (como principal base online), e também **uma sugestão adicional** de referência didática amplamente usada na área — o livro do **Maurício Samy Silva**, que é um clássico para ensino de HTML/CSS no Brasil.
-
 ---
 
 ## Referências
